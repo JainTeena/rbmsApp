@@ -20,12 +20,12 @@ class RbmsApplicationTests {
      
     @Test
     public void whenFindingCustomerById_thenCorrect() {
-    	customerRepository.save(new Customer(01, "Ram", "Raja", "16/09/1990", "ram@domain.com", "pass@123"));
+    	customerRepository.save(new Customer("1", "Ram", "Raja", "16/09/1990", "ram@domain.com", "pass@123"));
     }
     
     @Test
     public void whenFindingAllCustomers_thenCorrect() {
-    	customerRepository.save(new Customer(02, "Rakesh", "shukla", "16/09/1990", "rakesh@domain.com", "pass@123"));
+    	customerRepository.save(new Customer("2", "Rakesh", "shukla", "16/09/1990", "rakesh@domain.com", "pass@123"));
     	
     	List<Customer> customer =(List<Customer>) customerRepository.findAll();
     	

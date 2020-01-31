@@ -14,12 +14,12 @@ public class Customer {
 		super();
 	}
 	@Id
-	    private long id;
+	    private String id;
 	     
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public Customer(long id,String firstName, String lastName, String dob, String email, String password) {
+	public Customer(String id,String firstName, String lastName, String dob, String email, String password) {
 			super();
 			this.id=id;
 			this.firstName = firstName;
@@ -28,7 +28,7 @@ public class Customer {
 			this.email = email;
 			this.password = password;
 		}
-	private void setId(long id) {
+	private void setId(String id) {
 		this.id = id;
 	}
 	public String getFirstName() {
