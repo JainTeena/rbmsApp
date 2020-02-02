@@ -1,5 +1,7 @@
 package com.hotel.rbms;
 
+import java.util.Optional;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
@@ -34,10 +36,10 @@ public class RBMSController {
 	}
 	
 	@RequestMapping("/api/customer/{id}")
-	public String getCustomerById(@PathVariable("id") String  id) {
-		Customer custDetails = rbmsService.getCustomerById(id);
-		logger.info("GET CUSTOMER NAME--"+custDetails.getFirstName());
-		return custDetails.getFirstName();
+	public Optional<Customer> getCustomerById(@PathVariable("id") String  id) {
+		Optional<Customer> custDetails = rbmsService.getCustomerById(id);
+		logger.info("GET CUSTOMER NAME--"+custDetails);
+		return custDetails;
 	}
 
 }

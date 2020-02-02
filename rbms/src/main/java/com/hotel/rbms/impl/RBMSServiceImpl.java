@@ -1,5 +1,7 @@
 package com.hotel.rbms.impl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +16,8 @@ public class RBMSServiceImpl implements RBMSService{
 	RBMSDao rbmsDao;
 	
 	@Override
-	public Customer getCustomerById(String  id) {
-		Customer customer = rbmsDao.getCustomerById(id);
+	public Optional<Customer> getCustomerById(String  id) {
+		Optional<Customer> customer = rbmsDao.getCustomerById(id);
 		return customer;
 	}
 

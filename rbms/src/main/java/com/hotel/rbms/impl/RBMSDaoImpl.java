@@ -15,10 +15,10 @@ public class RBMSDaoImpl implements RBMSDao {
 	  @Autowired
 	    private CustomerRepository customerRepository;
 	  
-public Customer getCustomerById(String  id) {
+public Optional<Customer> getCustomerById(String  id) {
 	System.out.println("--id--"+id);
 	Optional<Customer> customer=  customerRepository.findById(id);
-	return customer.get();
+	return customer;
 }
 
 @Override
